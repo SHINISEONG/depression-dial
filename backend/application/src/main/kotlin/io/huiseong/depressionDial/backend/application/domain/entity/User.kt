@@ -4,7 +4,7 @@ import java.time.LocalDate
 import java.time.LocalDateTime
 
 data class User(
-    val id: Long,
+    val id: Long = 0,
     val stringId: String,
     val password: String,
     val birth: LocalDate,
