@@ -3,9 +3,16 @@ package io.huiseong.depressionDial.backend.application.domain.entity.emotion
 import java.time.LocalDateTime
 
 data class EmotionPositiveReframing(
-    val id: Long = 0,
+    val id: EmotionPositiveReframingId = 0,
     val positiveSide: String,
     val createdAt: LocalDateTime = LocalDateTime.now(),
-)
+) {
+    fun update(
+        positiveSide: String = this.positiveSide,
+    ) = copy(
+        positiveSide = positiveSide,
+    )
+}
 
+typealias EmotionPositiveReframingId = Long
 typealias EmotionPositiveReframings = List<EmotionPositiveReframing>

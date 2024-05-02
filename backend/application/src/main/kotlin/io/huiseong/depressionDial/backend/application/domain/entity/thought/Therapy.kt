@@ -5,11 +5,12 @@ import io.huiseong.depressionDial.backend.application.domain.vo.thought.TherapyM
 import java.time.LocalDateTime
 
 data class Therapy(
-    val id: Long = 0,
+    val id: TherapyId = 0,
     val therapyType: TherapyType,
     val therapyMethod: TherapyMethod,
     val createdAt: LocalDateTime = LocalDateTime.now(),
     val updatedAt: LocalDateTime = LocalDateTime.now()
 )
 
+typealias TherapyId = Long
 typealias Therapies = List<Therapy>
