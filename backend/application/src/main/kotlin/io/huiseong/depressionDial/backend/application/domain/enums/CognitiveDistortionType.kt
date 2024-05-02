@@ -1,6 +1,8 @@
 package io.huiseong.depressionDial.backend.application.domain.enums
 
-enum class CognitiveDistortionType(val value: Int) {
+typealias CognitiveDistortionCode = Int
+
+enum class CognitiveDistortionType(override val value: CognitiveDistortionCode) : ValuedEnum<CognitiveDistortionCode> {
     ALL_OR_NOTHING(0),
     OVER_GENERALIZATION(1),
     MENTAL_FILTER(3),

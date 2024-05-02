@@ -1,6 +1,8 @@
 package io.huiseong.depressionDial.backend.application.domain.enums
 
-enum class EmotionType(val value: Int) {
+typealias EmotionCode = Int
+
+enum class EmotionType(override val value: EmotionCode) : ValuedEnum<EmotionCode> {
     SADNESS(0),
     ANXIETY(1),
     GUILTY(2),

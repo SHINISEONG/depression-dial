@@ -1,0 +1,72 @@
+package io.huiseong.depressionDial.backend.application.domain.enums
+
+import io.huiseong.depressionDial.backend.application.domain.exceptions.common.InvalidEnumValueException
+
+typealias TherapyCode = Int
+
+enum class TherapyType(val value: TherapyCode) {
+    POSITIVE_REFRAMING(0),
+    MAGIC_DIAL(1),
+    STRAIGHTFORWARD_TECHNIQUE(2),
+    DOUBLE_STANDARD_TECHNIQUE(3),
+    EXAMINE_THE_EVIDENCE(4),
+    EXPERIMENTAL_TECHNIQUE(5),
+    SURVEY_TECHNIQUE(6),
+    RECURSIVE_TECHNIQUE(7),
+    SOCRATIC_METHOD(8),
+    SHADES_OF_GRAY(9),
+    SEMANTIC_METHOD(10),
+    DEFINE_TERMS(11),
+    BE_SPECIFIC(12),
+    BEST_WORST_AVERAGE(13),
+    SELF_MONITORING(14),
+    NEGATIVE_PRACTICE(15),
+    WORRY_EXPOSURE(16),
+    PARADOXICAL_MAGNIFICATION(17),
+    SHAME_ATTACKING_EXERCISE(18),
+    EXTERNALIZATION_OF_VOICES(19),
+    FEARED_FANTASY(20),
+    ACCEPTANCE_PARADOX(21),
+    TIME_PROJECTION(22),
+    RIDICULOUS_IMAGERY(23),
+    COGNITIVE_HYPNOSIS(24),
+    INDIVIDUAL_DOWNWARD_ARROW(25),
+    INTERPERSONAL_DOWNWARD_ARROW(26),
+    WHAT_IF_TECHNIQUE(27),
+    HIDDEN_EMOTION_TECHNIQUE(28),
+    COST_BENEFIT_ANALYSIS(29),
+    PARADOXICAL_COST_BENEFIT_ANALYSIS(30),
+    DEVILS_ADVOCATE_TECHNIQUE(31),
+    STIMULUS_CONTROL(32),
+    DECISION_MAKING_TOOL(33),
+    DAILY_ACTIVITY_SCHEDULE(34),
+    PLEASURE_PREDICTING_SHEET(35),
+    ANTI_PROCRASTINATION_SHEET(36),
+    GRADUATED_EXPOSURE(37),
+    FLOODING(38),
+    RESPONSE_PREVENTION(39),
+    DISTRACTION(40),
+    COGNITIVE_FLOODING(41),
+    IMAGERY_RESCRIPTING(42),
+    MEMORY_RESCRIPTING(43),
+    SMILE_AND_GREET_PRACTICE(44),
+    TALK_SHOW_HOST(45),
+    SELF_DISCLOSURE(46),
+    FLIRTING_EXERCISE(47),
+    REJECTION_PRACTICE(48),
+    BLAME_COST_BENEFIT_ANALYSIS(49),
+    RELATIONSHIP_JOURNAL(50),
+    FIVE_SECRETS_OF_EFFECTIVE_COMMUNICATION(51),
+    ONE_MINUTE_DRILL(52)
+    ;
+
+    companion object {
+        fun from(value: Int): TherapyType {
+            return entries.firstOrNull { it.value == value } ?: throw InvalidEnumValueException("TherapyType", value)
+        }
+    }
+}
+
+fun TherapyCode.toTherapyType(): TherapyType {
+    return TherapyType.from(this)
+}

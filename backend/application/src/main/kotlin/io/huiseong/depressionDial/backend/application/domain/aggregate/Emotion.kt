@@ -1,10 +1,15 @@
-package io.huiseong.depressionDial.backend.application.domain.entity.emotion
+package io.huiseong.depressionDial.backend.application.domain.aggregate
 
+import io.huiseong.depressionDial.backend.application.domain.entity.emotion.EmotionDailyDegree
+import io.huiseong.depressionDial.backend.application.domain.entity.emotion.EmotionDailyDegrees
+import io.huiseong.depressionDial.backend.application.domain.entity.emotion.EmotionPositiveReframing
+import io.huiseong.depressionDial.backend.application.domain.entity.emotion.EmotionPositiveReframings
 import io.huiseong.depressionDial.backend.application.domain.enums.EmotionType
 import io.huiseong.depressionDial.backend.application.domain.exceptions.DuplicateEmotionException
 
 data class Emotion(
     val id: Long = 0,
+    val negativeEventId: Long,
     val emotionType: EmotionType,
     val dailyDegrees: EmotionDailyDegrees = emptyList(),
     val emotionPositiveReframings: EmotionPositiveReframings = emptyList()

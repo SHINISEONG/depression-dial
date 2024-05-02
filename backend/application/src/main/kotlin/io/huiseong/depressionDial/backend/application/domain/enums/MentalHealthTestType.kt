@@ -1,6 +1,8 @@
 package io.huiseong.depressionDial.backend.application.domain.enums
 
-enum class MentalHealthTestType(val value: Int) {
+typealias MentalHealthTestTypeCode = Int
+
+enum class MentalHealthTestType(override val value: MentalHealthTestTypeCode) : ValuedEnum<MentalHealthTestTypeCode> {
     DEPRESSION_TEST(0),
     ANXIETY_TEST(1),
     ANGER_TEST(2),
