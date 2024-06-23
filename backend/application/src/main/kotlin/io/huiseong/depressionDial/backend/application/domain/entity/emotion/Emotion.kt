@@ -1,10 +1,6 @@
-package io.huiseong.depressionDial.backend.application.domain.aggregate
+package io.huiseong.depressionDial.backend.application.domain.entity.emotion
 
 import io.huiseong.depressionDial.backend.application.domain.entity.NegativeEventId
-import io.huiseong.depressionDial.backend.application.domain.entity.emotion.EmotionDailyDegree
-import io.huiseong.depressionDial.backend.application.domain.entity.emotion.EmotionDailyDegrees
-import io.huiseong.depressionDial.backend.application.domain.entity.emotion.EmotionPositiveReframing
-import io.huiseong.depressionDial.backend.application.domain.entity.emotion.EmotionPositiveReframings
 import io.huiseong.depressionDial.backend.application.domain.enums.EmotionType
 
 data class Emotion(

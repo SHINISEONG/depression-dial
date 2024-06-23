@@ -4,6 +4,7 @@ import java.time.LocalDateTime
 
 data class EmotionPositiveReframing(
     val id: EmotionPositiveReframingId = 0,
+    val emotionId: EmotionId,
     val positiveSide: String,
     val createdAt: LocalDateTime = LocalDateTime.now(),
 ) {

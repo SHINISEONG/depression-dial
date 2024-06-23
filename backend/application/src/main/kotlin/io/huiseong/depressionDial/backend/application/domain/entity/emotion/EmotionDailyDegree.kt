@@ -4,6 +4,7 @@ import java.time.LocalDateTime
 
 data class EmotionDailyDegree(
     val id: EmotionDailyDegreeId = 0L,
+    val emotionId: EmotionId,
     val current: Int,
     val goal: Int,
     val after: Int = 0,
